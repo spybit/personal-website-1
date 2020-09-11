@@ -1,0 +1,433 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+body {
+  margin: 0;
+}
+img {
+  width: auto;
+  height: 100px;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.dotted-hr {
+  border: dotted 6px white;
+  border-bottom: none;
+  margin: 20px auto;
+  width: 90px;
+}
+[class*='col-'] {
+  float: left;
+  padding: 10px;
+}
+/* For mobile */
+[class*='col-'] {
+  width: 100%;
+}
+/* Navbar design start here */
+.navbar {
+  background-color: #0c6168;
+  padding: 1% 7%;
+  text-align: center;
+}
+.navbar h1 {
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+}
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.navbar-menu a {
+  background-color: #40868b;
+  border-radius: 24px;
+  margin: 7px 0;
+  padding: 10px;
+  outline: none;
+}
+.navbar-menu a:hover {
+  background-color: gray;
+}
+.navbar::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+/* Navbar design end here */
+
+/* Profile design start here */
+.profile {
+  padding: 80px 10px;
+  position: relative;
+  text-align: center;
+}
+
+.profile .top-weather-icon {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  transition: transform 1.5s;
+}
+.profile .top-weather-icon:hover {
+  transform: rotate(360deg);
+}
+.profile .top-weather-icon-2 {
+  position: absolute;
+  top: 7px;
+  left: 40px;
+  transition: transform 1.5s;
+}
+.profile .top-weather-icon-2:hover {
+  transform: rotate(360deg);
+}
+.profile .bottom-weather-icon {
+  position: absolute;
+  bottom: 1px;
+  left: 40px;
+  transition: transform 1.5s;
+}
+.profile .bottom-weather-icon:hover {
+  transform: rotate(360deg);
+}
+.profile .bottom-weather-icon-2 {
+  position: absolute;
+  bottom: 1px;
+  right: 40px;
+  transition: transform 1.5s;
+}
+.profile .bottom-weather-icon-2:hover {
+  transform: rotate(360deg);
+}
+
+.profile-desc h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+}
+.profile-desc p {
+  color: gray;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 30px auto;
+}
+
+.profile::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+/* Profile design end here */
+
+/* About me design start here */
+.about-me {
+  background-color: #39a4ac;
+  padding: 1% 7%;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+}
+.about-me::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+/* About me design start here */
+.aboutme-image img {
+  border: 5px solid white;
+  border-radius: 50%;
+  height: 220px;
+  width: 200px;
+}
+.about-me p {
+  text-align: center;
+}
+
+.about-me a {
+  font-size: 1.2rem;
+}
+.about-me a:hover {
+  background-color: gray;
+  border-radius: 5px;
+  text-shadow: 0 0 3px white;
+}
+.cv-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 20px white;
+  padding: 15px;
+  width: 125px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.5s;
+  margin: 16px 0;
+  font-weight: bold;
+}
+.cv-button:hover {
+  box-shadow: 0 0 10px white;
+  background-color: #2ecc71;
+  width: 160px;
+}
+/* About me design end here */
+
+/* professional-experience start here */
+.professional-experience {
+  padding: 1% 0%;
+}
+.card {
+  background-color: #a39e9e;
+  border-radius: 10px;
+  padding: 10px;
+  height: 700px;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 2px 4px 10px 5px gray;
+}
+.card-icon {
+  text-align: center;
+}
+.card-icon img {
+  border: 2px solid #2ecc71;
+  border-radius: 25%;
+  height: 120px;
+  width: 100px;
+  background-color: white;
+}
+.card-tittle h2 {
+  background-color: #616161;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.skills-container {
+  padding-right: 45px;
+}
+
+.skills-container li {
+  list-style: none;
+  font-weight: bolder;
+  margin: 25px 10px;
+  position: relative;
+  padding: 3px;
+}
+.skills-container li::before {
+  content: ' ';
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+
+  width: 100%;
+  height: 20px;
+  background-color: rgb(86, 86, 153, 0.5);
+  border-radius: 10px;
+}
+.skills-container li::after {
+  content: ' ';
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+
+  width: 0%;
+  height: 20px;
+  background-color: rgb(86, 86, 153, 1);
+  border-radius: 10px;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 3;
+}
+.skills-container li.html::after {
+  animation-name: html;
+}
+@keyframes html {
+  to {
+    width: 85%;
+  }
+}
+.skills-container li.css::after {
+  animation-name: css;
+}
+@keyframes css {
+  to {
+    width: 75%;
+  }
+}
+.skills-container li.bootstrap::after {
+  animation-name: bootstrap;
+}
+@keyframes bootstrap {
+  to {
+    width: 20%;
+  }
+}
+.skills-container li.javascript::after {
+  animation-name: javascript;
+}
+@keyframes javascript {
+  to {
+    width: 05%;
+  }
+}
+.skills-container li.jquery::after {
+  animation-name: jquery;
+}
+@keyframes jquery {
+  to {
+    width: 05%;
+  }
+}
+.skills-container li.github::after {
+  animation-name: github;
+}
+@keyframes github {
+  to {
+    width: 40%;
+  }
+}
+.skills-container li.c::after {
+  animation-name: c;
+}
+@keyframes c {
+  to {
+    width: 95%;
+  }
+}
+.skills-container li.c-plus::after {
+  animation-name: c-plus;
+}
+@keyframes c-plus {
+  to {
+    width: 85%;
+  }
+}
+.skills-container li.python::after {
+  animation-name: python;
+}
+@keyframes python {
+  to {
+    width: 20%;
+  }
+}
+
+.professional-experience::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+/* professional-experience end here */
+
+/* achievement-contact start here */
+.achievement-contact {
+  padding: 1% 7%;
+  background-color: #39a4ac;
+  color: white;
+  padding: 24px;
+}
+
+.contact {
+  text-align: center;
+}
+.contact input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+}
+.contact button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 20px white;
+  padding: 15px;
+  width: 125px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.5s;
+  margin: 16px 0;
+  font-weight: bold;
+}
+.contact button:hover {
+  box-shadow: 0 0 10px white;
+  background-color: #2ecc71;
+  width: 160px;
+}
+.contact-links {
+  text-align: center;
+}
+.media-button .btn {
+  border: none;
+  border-radius: 25px;
+  font-size: 32px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+  width: 50px;
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px 9px white;
+  border: 1px solid #2ecc71;
+}
+
+.achievement-contact::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+/* achievement-contact end here */
+
+/* footer start from here */
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+.footer-menu a {
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 24px;
+}
+.footer-menu a:hover {
+  box-shadow: 0 0 10px 10px #2ecc71;
+}
+
+.footer::after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+/* footer end from here */
